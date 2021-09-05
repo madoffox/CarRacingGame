@@ -167,6 +167,7 @@
                     <connections>
                         <outlet property="carCenterConstraint" destination="MCN-eb-UJ5" id="ajM-K5-8ER"/>
                         <outlet property="carImageView" destination="LdN-iT-Kax" id="QVZ-c7-QvJ"/>
+                        <outlet property="roadView" destination="w5R-XB-V3T" id="ScV-MK-lWx"/>
                         <outlet property="treeCenterConstraint" destination="7N7-sd-Kqh" id="sYX-7n-dUd"/>
                         <outlet property="treeImageView" destination="X7K-DY-sSG" id="v7i-Xe-iVK"/>
                         <outlet property="treeTopConstraint" destination="2Ng-m7-7vP" id="QZk-Ke-9dL"/>

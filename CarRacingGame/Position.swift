@@ -8,9 +8,7 @@
 import Foundation
 import UIKit
 
-enum Position {
-    
-    
+enum Position: CaseIterable {
     case left
     case center
     case right

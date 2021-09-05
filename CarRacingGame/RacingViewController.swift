@@ -13,6 +13,9 @@ class RacingViewController: UIViewController {
     @IBOutlet private weak var carCenterConstraint: NSLayoutConstraint!
     @IBOutlet private weak var treeCenterConstraint: NSLayoutConstraint!
     @IBOutlet private weak var treeTopConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var roadView: UIView!
+    
+    private let carAppearanceTimeInterval: TimeInterval = 1
     
     var carPosition: Position = .center {
         didSet {
@@ -22,6 +25,39 @@ class RacingViewController: UIViewController {
             }
             
         }
+    }
+    
+    var treePosition: Position = .center {
+        didSet {
+            self.treeCenterConstraint.constant = self.treePosition.offset
+            self.treeTopConstraint.constant = 0
+            self.view.layoutSubviews()
+            
+            UIView.animate(withDuration: Constants.defaultAnimationDuration, delay: Constants.defaultAnimationDuration) {
+                self.treeTopConstraint.constant = self.roadView.frame.height - self.treeImageView.frame.height
+                self.view.layoutSubviews()
+            } completion: { _ in
+                if self.carPosition == self.treePosition {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Основной экран"
+        moveTreeToRandomPlace()
+    }
+    
+    func moveTreeToRandomPlace() {
+        Timer.scheduledTimer(
+            withTimeInterval: carAppearanceTimeInterval,
+            repeats: true
+        ) { _ in
+            self.treePosition = Position.allCases.randomElement()
+        }
+        
     }
     
     @IBAction private func leftButtonPressed() {
