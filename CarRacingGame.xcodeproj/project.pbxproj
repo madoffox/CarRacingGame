@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		86E0279426E3BEF1003831BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E0279326E3BEF1003831BA /* AppDelegate.swift */; };
 		86E0279626E3BEF1003831BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E0279526E3BEF1003831BA /* SceneDelegate.swift */; };
-		86E0279826E3BEF1003831BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E0279726E3BEF1003831BA /* ViewController.swift */; };
+		86E0279826E3BEF1003831BA /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E0279726E3BEF1003831BA /* StartViewController.swift */; };
 		86E0279B26E3BEF1003831BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E0279926E3BEF1003831BA /* Main.storyboard */; };
 		86E0279D26E3BEF2003831BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86E0279C26E3BEF2003831BA /* Assets.xcassets */; };
 		86E027A026E3BEF2003831BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86E0279E26E3BEF2003831BA /* LaunchScreen.storyboard */; };
+		86E027A926E3C864003831BA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E027A826E3C864003831BA /* UIView+Extensions.swift */; };
+		86E027AB26E3C974003831BA /* RacingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E027AA26E3C974003831BA /* RacingViewController.swift */; };
+		86E027AD26E3CE4D003831BA /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E027AC26E3CE4D003831BA /* Position.swift */; };
+		86E027AF26E3D2FE003831BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E027AE26E3D2FE003831BA /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		86E0279026E3BEF1003831BA /* CarRacingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRacingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E0279326E3BEF1003831BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86E0279526E3BEF1003831BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		86E0279726E3BEF1003831BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		86E0279726E3BEF1003831BA /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		86E0279A26E3BEF1003831BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86E0279C26E3BEF2003831BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86E0279F26E3BEF2003831BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86E027A126E3BEF2003831BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86E027A826E3C864003831BA /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		86E027AA26E3C974003831BA /* RacingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacingViewController.swift; sourceTree = "<group>"; };
+		86E027AC26E3CE4D003831BA /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		86E027AE26E3D2FE003831BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,25 @@
 			children = (
 				86E0279326E3BEF1003831BA /* AppDelegate.swift */,
 				86E0279526E3BEF1003831BA /* SceneDelegate.swift */,
-				86E0279726E3BEF1003831BA /* ViewController.swift */,
+				86E027A726E3C856003831BA /* Extensions */,
+				86E0279726E3BEF1003831BA /* StartViewController.swift */,
+				86E027AA26E3C974003831BA /* RacingViewController.swift */,
+				86E027AC26E3CE4D003831BA /* Position.swift */,
 				86E0279926E3BEF1003831BA /* Main.storyboard */,
 				86E0279C26E3BEF2003831BA /* Assets.xcassets */,
 				86E0279E26E3BEF2003831BA /* LaunchScreen.storyboard */,
 				86E027A126E3BEF2003831BA /* Info.plist */,
 			);
 			path = CarRacingGame;
+			sourceTree = "<group>";
+		};
+		86E027A726E3C856003831BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				86E027A826E3C864003831BA /* UIView+Extensions.swift */,
+				86E027AE26E3D2FE003831BA /* Constants.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E0279826E3BEF1003831BA /* ViewController.swift in Sources */,
+				86E0279826E3BEF1003831BA /* StartViewController.swift in Sources */,
 				86E0279426E3BEF1003831BA /* AppDelegate.swift in Sources */,
+				86E027AD26E3CE4D003831BA /* Position.swift in Sources */,
+				86E027AB26E3C974003831BA /* RacingViewController.swift in Sources */,
+				86E027AF26E3D2FE003831BA /* Constants.swift in Sources */,
+				86E027A926E3C864003831BA /* UIView+Extensions.swift in Sources */,
 				86E0279626E3BEF1003831BA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
